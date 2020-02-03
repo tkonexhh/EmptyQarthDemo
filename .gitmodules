@@ -1,0 +1,3 @@
+[submodule "UnityProject/EmptyQarth/Assets/Qarth"]
+	path = UnityProject/EmptyQarth/Assets/Qarth
+	url = git@github.com:tkonexhh/Qarth.git
