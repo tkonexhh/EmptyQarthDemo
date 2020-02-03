@@ -1,0 +1,167 @@
+
+logo-xiao.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ggg
+  rotate: false
+  xy: 397, 273
+  size: 114, 114
+  orig: 114, 114
+  offset: 0, 0
+  index: -1
+k-1
+  rotate: false
+  xy: 931, 777
+  size: 81, 80
+  orig: 81, 80
+  offset: 0, 0
+  index: -1
+k-1a
+  rotate: false
+  xy: 2, 2
+  size: 200, 116
+  orig: 200, 116
+  offset: 0, 0
+  index: -1
+k-2
+  rotate: false
+  xy: 354, 113
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+k-2a
+  rotate: false
+  xy: 354, 165
+  size: 109, 106
+  orig: 109, 106
+  offset: 0, 0
+  index: -1
+k-3
+  rotate: false
+  xy: 465, 183
+  size: 87, 88
+  orig: 87, 88
+  offset: 0, 0
+  index: -1
+k-3a
+  rotate: true
+  xy: 803, 799
+  size: 220, 126
+  orig: 220, 126
+  offset: 0, 0
+  index: -1
+k-4
+  rotate: false
+  xy: 658, 417
+  size: 59, 58
+  orig: 59, 58
+  offset: 0, 0
+  index: -1
+k-4a
+  rotate: true
+  xy: 931, 859
+  size: 160, 78
+  orig: 160, 78
+  offset: 0, 0
+  index: -1
+k-5
+  rotate: true
+  xy: 719, 418
+  size: 57, 56
+  orig: 57, 56
+  offset: 0, 0
+  index: -1
+k-5a
+  rotate: false
+  xy: 587, 631
+  size: 186, 161
+  orig: 186, 161
+  offset: 0, 0
+  index: -1
+liuxin
+  rotate: true
+  xy: 775, 629
+  size: 163, 13
+  orig: 163, 13
+  offset: 0, 0
+  index: -1
+xin-1
+  rotate: false
+  xy: 208, 302
+  size: 17, 30
+  orig: 21, 32
+  offset: 2, 1
+  index: -1
+ziti
+  rotate: false
+  xy: 2, 534
+  size: 583, 485
+  orig: 583, 485
+  offset: 0, 0
+  index: -1
+ziti-0
+  rotate: true
+  xy: 584, 409
+  size: 66, 72
+  orig: 380, 280
+  offset: 260, 26
+  index: -1
+ziti-1
+  rotate: false
+  xy: 208, 138
+  size: 144, 135
+  orig: 380, 280
+  offset: 182, 26
+  index: -1
+ziti-2
+  rotate: true
+  xy: 587, 477
+  size: 152, 181
+  orig: 380, 280
+  offset: 175, 26
+  index: -1
+ziti-3
+  rotate: false
+  xy: 2, 120
+  size: 204, 212
+  orig: 380, 280
+  offset: 126, 26
+  index: -1
+ziti-4
+  rotate: false
+  xy: 587, 794
+  size: 214, 225
+  orig: 380, 280
+  offset: 116, 27
+  index: -1
+ziti-6
+  rotate: false
+  xy: 2, 334
+  size: 243, 198
+  orig: 380, 280
+  offset: 87, 54
+  index: -1
+ziti-7
+  rotate: false
+  xy: 247, 389
+  size: 251, 143
+  orig: 380, 280
+  offset: 51, 109
+  index: -1
+ziti-8
+  rotate: false
+  xy: 247, 275
+  size: 148, 112
+  orig: 380, 280
+  offset: 51, 137
+  index: -1
+ziti-9
+  rotate: true
+  xy: 500, 433
+  size: 99, 82
+  orig: 380, 280
+  offset: 51, 167
+  index: -1
