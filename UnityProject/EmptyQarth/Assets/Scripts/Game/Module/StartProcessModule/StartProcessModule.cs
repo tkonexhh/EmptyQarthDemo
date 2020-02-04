@@ -18,7 +18,6 @@ namespace GameWish.Game
             Append(new LoginNode());
             //关闭加载界面
 
-            Append(new ABTestNode());
         }
     }
 }
