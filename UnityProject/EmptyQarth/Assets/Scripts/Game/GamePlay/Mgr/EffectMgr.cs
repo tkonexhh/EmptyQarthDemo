@@ -6,38 +6,26 @@ using System;
 
 namespace GameWish.Game
 {
-	public class EffectMgr : TSingleton<EffectMgr>
-	{
+    public class EffectMgr : TSingleton<EffectMgr>
+    {
         private ResLoader m_ResLoader = null;
-	    private Transform m_EffectRoot;
+        private Transform m_EffectRoot;
 
         public void Init()
         {
-            
-            AddParticalPool(Define.CLEAR_BLUE_EFFECT, 8, 5);
-            AddParticalPool(Define.CLEAR_GREEN_EFFECT, 8, 5);
-            AddParticalPool(Define.CLEAR_PURPLE_EFFECT, 8, 5);
-            AddParticalPool(Define.CLEAR_RED_EFFECT, 8, 5);
-            AddParticalPool(Define.CLEAR_YELLOW_EFFECT, 8, 5);
-            AddParticalPool(Define.CLEAR_SCORE_EFFECT, 8, 5);
-            AddParticalPool(Define.CLEAR_PROP_EFFECT, 8, 5);
 
-            AddParticalPool(Define.CUBE_BLUE_EFFECT,8,8);
-            AddParticalPool(Define.CUBE_CYAN_EFFECT,8,8);
-            AddParticalPool(Define.CUBE_GREEN_EFFECT,8,8);
-            AddParticalPool(Define.CUBE_PURPLE_EFFECT,8,8);
-            AddParticalPool(Define.CUBE_RED_EFFECT,8,8);
-            AddParticalPool(Define.CUBE_YELLOW_EFFECT,8,8);
+            //AddParticalPool(Define.CLEAR_BLUE_EFFECT, 8, 5);
+
         }
 
-	    public override void OnSingletonInit()
-	    {
-	        base.OnSingletonInit();
-	        //m_ResLoader = ResLoader.Allocate("EffectLoader");
-	        m_EffectRoot = GameObject.Find("GameplayRoot/EffectRoot").transform;
-	    }
+        public override void OnSingletonInit()
+        {
+            base.OnSingletonInit();
+            //m_ResLoader = ResLoader.Allocate("EffectLoader");
+            m_EffectRoot = GameObject.Find("GameplayRoot/EffectRoot").transform;
+        }
 
-	    private void AddParticalPool(string name, int max, int init)
+        private void AddParticalPool(string name, int max, int init)
         {
             GameObject prefab = null;
             //prefab = m_ResLoader.LoadSync(name) as GameObject;
@@ -46,30 +34,30 @@ namespace GameWish.Game
                 GameObjectPoolMgr.S.AddPool(name, prefab, max, init);
         }
 
-	    public void ShowEffect(string name, Vector3 worldPos, float lifeTime, Action callback)
-	    {
-	        GameObject effect = GameObjectPoolMgr.S.Allocate(name);
-	        effect.transform.SetParent(m_EffectRoot);
-	        effect.transform.position = worldPos;
+        public void ShowEffect(string name, Vector3 worldPos, float lifeTime, Action callback)
+        {
+            GameObject effect = GameObjectPoolMgr.S.Allocate(name);
+            effect.transform.SetParent(m_EffectRoot);
+            effect.transform.position = worldPos;
 
-	        if (lifeTime < 0) return;
-	        UnityExtensions.CallWithDelay(GameplayMgr.S, () =>
-	        {
-	            //todo :Èç¹û¹ÒÓÐ½Å±¾¼ÇµÃreset,ÒýÓÃÖÃ¿Õ
-	            if (effect == null)//effect±»destroy
-	                return;
-	            ResetPartical(effect);
-	            GameObjectPoolMgr.S.Recycle(effect);
-	            if (callback != null)
-	            {
-	                callback.Invoke();
-	            }
-	        }, lifeTime);
-	    }
+            if (lifeTime < 0) return;
+            UnityExtensions.CallWithDelay(GameplayMgr.S, () =>
+            {
+                //todo :ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð½Å±ï¿½ï¿½Çµï¿½reset,ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½
+                if (effect == null)//effectï¿½ï¿½destroy
+                    return;
+                ResetPartical(effect);
+                GameObjectPoolMgr.S.Recycle(effect);
+                if (callback != null)
+                {
+                    callback.Invoke();
+                }
+            }, lifeTime);
+        }
 
         #region show effect in UI
 
-        //¸ù½ÚµãÔÚÖ¸¶¨µÄroot
+        //ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½root
         public void ShowUIEffectInPanel(string name, Vector3 worldPos, float lifeTime, Transform root, int sortOrder, Action callback)
         {
             if (root)
@@ -89,13 +77,13 @@ namespace GameWish.Game
                 UIMgr.S.OpenPanel(UIID.UIParticalPanel, (p) =>
                 {
                     panel = p as UIParticalPanel;
-                    DoShowUIEffect(name, panel.transform, panel.sortIndex+20, worldPos, lifeTime, callback);
-                });//panelµÄ»Øµ÷·½·¨²»ÔÚÕâÒ»Ö¡Ö´ÐÐ,ËùÒÔ²»ÄÜÔÚ»Øµ÷ÖÐ¶Ôpanel¸³ÖµÈ»ºóµ÷ÓÃdo·½·¨£¬¶øÊÇÔÚ»Øµ÷ÖÐµ÷ÓÃ,²»È»panel»á±¨¿Õ
+                    DoShowUIEffect(name, panel.transform, panel.sortIndex + 20, worldPos, lifeTime, callback);
+                });//panelï¿½Ä»Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ö¡Ö´ï¿½ï¿½,ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½ï¿½Ú»Øµï¿½ï¿½Ð¶ï¿½panelï¿½ï¿½ÖµÈ»ï¿½ï¿½ï¿½ï¿½ï¿½doï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú»Øµï¿½ï¿½Ðµï¿½ï¿½ï¿½,ï¿½ï¿½È»panelï¿½á±¨ï¿½ï¿½
 
                 return;
             }
 
-            DoShowUIEffect(name, panel.transform, panel.sortIndex+20, worldPos, lifeTime, callback);
+            DoShowUIEffect(name, panel.transform, panel.sortIndex + 20, worldPos, lifeTime, callback);
         }
 
         private void DoShowUIEffect(string name, Transform root, int sortOrder, Vector3 worldPos, float lifeTime, Action callback)
@@ -114,7 +102,7 @@ namespace GameWish.Game
             if (lifeTime < 0) return;
             UnityExtensions.CallWithDelay(GameplayMgr.S.Mono, () =>
             {
-                //todo :Èç¹û¹ÒÓÐ½Å±¾¼ÇµÃreset,ÒýÓÃÖÃ¿Õ
+                //todo :ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð½Å±ï¿½ï¿½Çµï¿½reset,ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½
                 if (effect == null)
                     return;
                 ResetPartical(effect);

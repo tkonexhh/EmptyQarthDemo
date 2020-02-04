@@ -18,4 +18,19 @@ MonoBehaviour:
     values:
     - false
     - true
-  tableRemotePair: []
+  - key: 20
+    defaultValue: true
+    values:
+    - false
+    - true
+  tableRemotePair:
+  - key: 20
+    tableClassName: 
+    defaultValue: 
+    values:
+    - 
+    - 
+  - key: 0
+    tableClassName: 
+    defaultValue: 
+    values: []

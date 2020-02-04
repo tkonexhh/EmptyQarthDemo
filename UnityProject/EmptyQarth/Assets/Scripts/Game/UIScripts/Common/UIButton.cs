@@ -55,7 +55,7 @@ namespace UnityEngine.UI
         private Vector3 startPosition = Vector3.zero;
         private Tweener m_Tweener;
 
-        private string m_DefaultClickSound = Define.SOUND_DEFAULT_UI_BTN;
+        private string m_DefaultClickSound = "";//Define.SOUND_DEFAULT_UI_BTN;
         public string ClickSoundName
         {
             get
@@ -176,7 +176,7 @@ namespace UnityEngine.UI
 
                     m_ClickDownAnimeMethod = () =>
                     {
-                        if(m_Tweener != null)
+                        if (m_Tweener != null)
                         {
                             m_Tweener.Kill();
                         }
@@ -184,7 +184,8 @@ namespace UnityEngine.UI
 
                         m_Tweener = transform.DOPunchPosition(new Vector3(10, 0, 0), 0.1f).OnComplete(() =>
                         {
-                            transform.DOPunchPosition(new Vector3(-10, 0, 0), 0.1f).OnComplete(()=> {
+                            transform.DOPunchPosition(new Vector3(-10, 0, 0), 0.1f).OnComplete(() =>
+                            {
                                 transform.localPosition = startPosition;
                             }
 );

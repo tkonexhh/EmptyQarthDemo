@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/AddressableAssets/GameScene/Game.unity
+    path: Assets/Res/FolderMode/Scene/Game.unity
     guid: a92c6aad881040240811a6c978c5870e
   - enabled: 1
     path: Assets/AddressableAssets/ClassicMode/ClassicModeScene.unity

@@ -42,42 +42,17 @@ namespace GameWish.Game
             MeasureUnitHelper.AddCount(0, 0, -50, -500);
             Log.i(MeasureUnitHelper.GetTotalCount());
         }
-        int adtype = (int)AdType.PowerUp;
+
         private void OnClickF2()
         {
-
-            //  EventSystem.S.Send(EventID.OnShowPopAdUI, AdType.SummonGiant);
-
-            EventSystem.S.Send(EventID.OnShowPopAdUI, AdType.SummonReinforcements);
-
-            // adtype++;
-            // UIMgrExtend.S.OpenOccupyOverPanel(TDStageTable.GetData(101));
-            // UIMgrExtend.S.OpenUnlockSoldierPanel(TDSoldierListTable.GetData(1));
-            // EventSystem.S.Send(EventID.GuideEventTrigger, 1);
-            //RateMgr.S.RequestReview();
         }
 
         private void OnClickF3()
         {
-            //GameDataMgr.S.GetPlayerInfoData().AddCoinNum(10000);
 
-            //  AdEffectHandleMgr.S.Handle(AdType.AutoDoubleSummon, null);
-            // UIMgrExtend.S.OpenAdStaticShowPanel(AdType.AutoDoubleSummon);
-            //MagicCloudMgr.S.StartCloudAttack();
         }
-        int add = 1;
         private void OnClickF4()
         {
-            //UIMgrExtend.S.OpenAdDynamicShowPanel(AdType.SummonReinforcements,2,10);
-            // UIMgrExtend.S.OpenOccupyOverPanel(TDStageTable.GetData(101));
-            //UIMgrExtend.S.OpenMissionCompletePanel("AAAA", "任务完成信息");
-            //  MagicCloudMgr.S.Init();
-            //   SoldierMgr.S.ResumeAllSoldierBehave();
-            //UIMgr.S.OpenPanel(UIID.MilestonePanel, add++);
-            //if(add > 5)
-            //{
-            //    add = 5;
-            //}
 
         }
 
