@@ -147,18 +147,6 @@ namespace GameWish.Game
                 call.Invoke();
         }
 
-        static public void SetLocalPos(this GameObject obj, Vector3 pos)
-        {
-            obj.transform.localPosition = pos;
-        }
-        static public void SetPos(this GameObject obj, Vector3 pos)
-        {
-            obj.transform.position = pos;
-        }
-        static public void SetAngle(this GameObject obj, Vector3 angle)
-        {
-            obj.transform.localEulerAngles = angle;
-        }
         /// 设置X，只改变X c
         /// </summary>
         /// <param name="trans"></param>
