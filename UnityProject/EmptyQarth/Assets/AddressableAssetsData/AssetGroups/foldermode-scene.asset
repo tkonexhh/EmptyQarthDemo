@@ -10,23 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Default Local Group
+  m_Name: foldermode-scene
   m_EditorClassIdentifier: 
-  m_GroupName: Default Local Group
+  m_GroupName: foldermode-scene
   m_Data:
     m_SerializedData: []
-  m_GUID: 036c1bbb7dbc54dd7b577f279eeeb1c9
+  m_GUID: ece7fa54892a343b0a8ef0a8fbb19d2f
   m_SerializeEntries:
-  - m_GUID: 004d0d067265e426d8d7e617cd769d9f
-    m_Address: Cube
+  - m_GUID: 40f44a0145654466a9388093b09d3026
+    m_Address: AddressDemo
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - High
-    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_SerializedLabels: []
+    m_mainAssetType: UnityEditor.SceneAsset, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: ce08b50ceed544ac9b94814dfc15a368, type: 2}
   m_SchemaSet:
-    m_Schemas:
-    - {fileID: 11400000, guid: 3eb1e098efbb64defb4321ccf75a1fa9, type: 2}
-    - {fileID: 11400000, guid: c25c076f0aa924942916bc2e5434d829, type: 2}
+    m_Schemas: []
